@@ -13,7 +13,7 @@ const ChatsAPI = {
                 delivered: true,
                 read: false
             }
-        }, 
+        },
         {
             id: '5c5885108c7a91e5b8eb8cc7',
             img: 'http://iconnectites.com/images/website-development.png',

@@ -9,41 +9,33 @@ import {getContacts, addToBlackList} from '../../../store/actions';
 import {connect} from 'react-redux';
 
 class Contacts extends React.Component {
-	componentDidMount()
-    {
-        this.props.dispatch(getContacts());
-        // this.props.dispatch(getContacts(localStorage.getItem('token')));
+
+	componentDidMount(){
+		this.props.dispatch(getContacts());
 	}
 
-    addToBlackList = (id) => {
-        // console.log(id);
-        this.props.dispatch(addToBlackList(id));
-    }
+	addToBlackList = (id) => {
+		this.props.dispatch(addToBlackList(id));
+	}
 
 	render() {
 		if(this.props.is_loading_contacts){
-            return <Spinner />
-        }
-        
-        return (
-            <ContactsList contacts = {this.props.contacts}
-                        addToBlackList = {this.addToBlackList}/>
-        );
-
-    }
+			return <Spinner />
+		}
+		return (
+			<ContactsList contacts = {this.props.contacts}
+										addToBlackList = {this.addToBlackList}/>
+		);
+  }
 }
 
 function mapStateToProps(store) {
-    return {
-        contacts: store.contacts.contacts,
-		is_loading_contacts: store.contacts.is_loading,
-    }
+	return {
+		contacts: store.contacts.contacts,
+		// id: store.contacts.id,
+		is_loading_contacts: store.contacts.is_loading
+	}
 }
 
 
 export default connect(mapStateToProps)(Contacts);
-
-
-
-
-

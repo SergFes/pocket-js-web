@@ -18,6 +18,7 @@ import classes from './messageForm.module.css';
 class MessageForm extends Component {
     state = {
         id: null,
+        active: null,
         menu: false,
         profile: false,
         modal: null
@@ -27,6 +28,7 @@ class MessageForm extends Component {
         if (nextProps.id !== prevState.id) {
             return {
                 id: nextProps.id,
+                active: nextProps.active
             }
         }
         //если состояние не изменилось
@@ -58,7 +60,6 @@ class MessageForm extends Component {
     }
 
     sendMessage = (text) => {
-         console.log(this.state.id);
         let timestamp = new Date();
         this.props.dispatch(addMessage({
             receiver: 55,
@@ -141,37 +142,24 @@ class MessageForm extends Component {
         ];
 
         //информация о чате в шапке поля сообщений
-        let chatImg, chatName, chatTitle, chatInfo,
+        let activeChat, chatTitle,
             chatData = {}; //данные для открытия профиля через меню в шапке сообщений
 
         //ищем по id в списке чатов в сторе
         if (this.state.id !== undefined) {
-            let activeChat = this.props.contacts.find(x => x.id === this.state.id);
-            if (activeChat !== undefined) {
-                chatImg = activeChat.img;
-                chatName = activeChat.name;
-                chatInfo = activeChat.info;
-                chatData = {
-                    img: chatImg,
-                    name: chatName,
-                    info: chatInfo
-                }
-            }
-            if (activeChat === undefined) {
-                activeChat = this.props.chats.find(x => x.id === this.state.id);
-                chatImg = activeChat.img;
-                chatTitle = activeChat.name;
-                chatInfo = activeChat.info;
-                chatData = {
-                    img: chatImg,
-                    name: chatTitle,
-                    info: chatInfo
-                }
-            }
+          if(this.state.active === 2){
+            activeChat = this.props.contacts.find(x => x.contact === this.state.id);
+            chatTitle = activeChat.byname;
+            chatData = {name: chatTitle}
+          }else{
+            activeChat = this.props.chats.find(x => x.id === this.state.id);
+            chatTitle = activeChat.name;
+            chatData = {name: chatTitle}
+          }
         }
         //меню в шапке сообщений
         //меню для группы/контакта
-        let menuItems = (this.props.active === 1) ? groupsMenu : contactsMenu;
+        let menuItems = (this.state.active === 1) ? groupsMenu : contactsMenu;
         //показываем/скрываем меню (state по клику)
         const menu = this.state.menu ? (
             <div>
@@ -185,7 +173,7 @@ class MessageForm extends Component {
         ) : null;
 
         //профиль группы/контакта (открывается из меню)
-        let profileType = (this.props.active === 1) ?
+        let profileType = (this.state.active === 1) ?
             <GroupProfile profile={chatData} profileToggle={this.profileToggle} />
             :
             <ProfileUser profile={chatData} profileToggle={this.profileToggle} />
@@ -208,8 +196,8 @@ class MessageForm extends Component {
                 <div className={classes.Header}>
                     <div className={classes.ChatInfo}>
                         <div className={classes.ChatIcon}>
-                            <img src={chatImg}
-                                className={(chatName !== undefined || this.state.id === undefined) ? //картинки нет при открытии приложения и при выборе контакта
+                            <img src='https://partner.internet-akademia.ru/upload/site/user.png'
+                                className={(this.state.id === undefined) ? //картинки нет при открытии приложения
                                     classes.ChatImgNone :
                                     classes.ChatImg}
                                 alt="group_icon" />
