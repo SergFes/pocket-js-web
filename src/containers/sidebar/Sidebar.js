@@ -8,9 +8,9 @@ import Main from '../../components/sidebar/Main';
 import classes from './Sidebar.module.css';
 
 class Sidebar extends React.Component {
-    //state - для переключения списка чатов/контактов
+    // state - для переключения списка чатов/контактов
     state = {
-        active: 'chats'
+        active: 'chats',
     };
 
     render() {
@@ -20,31 +20,38 @@ class Sidebar extends React.Component {
                 <SidebarHeader />
                 {/* чаты vs контакты */}
                 <div className={classes.Tabs}>
-                    <div className={classes.Tab}
-                        onClick={() => this.setState({ active: 'chats' })}>
-                        <Tab href="/chats" anotherLink='/'>
-                            <i className={classes.Icon + ' fas fa-envelope'} />
+                    <div
+                        className={classes.Tab}
+                        onClick={() => this.setState({ active: 'chats' })}
+                    >
+                        <Tab href='/chats' anotherLink='/'>
+                            <i className={`${classes.Icon} fas fa-envelope`} />
                             <span className={classes.Text}>Чаты</span>
                         </Tab>
                     </div>
-                    <div className={classes.Tab}
-                        onClick={() => this.setState({ active: 'contacts' })}>
-                        <Tab href="/contacts">
-                            <i className={(this.state.active === 'contacts') ?
-                                classes.IconActive + ' fas fa-user-friends' :
-                                classes.Icon + ' fas fa-user-friends'} />
-                            <span className={(this.state.active === 'contacts') ?
-                                classes.TextActive : classes.Text}>Контакты</span>
+                    <div
+                        className={classes.Tab}
+                        onClick={() => this.setState({ active: 'contacts' })}
+                    >
+                        <Tab href='/contacts'>
+                            <i className={(this.state.active === 'contacts')
+                                ? `${classes.IconActive} fas fa-user-friends`
+                                : `${classes.Icon} fas fa-user-friends`}
+                            />
+                            <span className={(this.state.active === 'contacts')
+                                ? classes.TextActive : classes.Text}
+                            >
+Контакты
+                            </span>
                         </Tab>
                     </div>
                 </div>
-                {/*списки, профили*/}
+                {/* списки, профили */}
                 <Main />
             </div>
-        )
+        );
     }
 }
 
 
 export default Sidebar;
-

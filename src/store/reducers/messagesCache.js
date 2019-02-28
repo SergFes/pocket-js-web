@@ -1,6 +1,6 @@
 const ChatMessagesСache = {
     messages: {},
-    getChatMessages(chat_id, limit, offset = 0){ //limit - ограничение забираемых сообщений, offset - сдвиг, чтобы забрать историю
+    getChatMessages(chat_id, limit, offset = 0) { // limit - ограничение забираемых сообщений, offset - сдвиг, чтобы забрать историю
         console.log('messages from cache');
         return chat_id in this.messages ? this.messages[chat_id].slice(offset, offset + limit) : [];
     },
@@ -9,15 +9,14 @@ const ChatMessagesСache = {
             this.messages[chat_id] = [];
         }
 
-        //для истории
+        // для истории
         if (position === 'before') {
             this.messages[chat_id] = messages.concat(this.messages[chat_id]);
         } else {
             this.messages[chat_id] = this.messages[chat_id].concat(messages);
         }
-        
     },
-    deleteChatMessages(){}
-}
+    deleteChatMessages() {},
+};
 
-export default ChatMessagesСache
+export default ChatMessagesСache;

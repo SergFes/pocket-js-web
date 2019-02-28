@@ -22,8 +22,8 @@ class MainPage extends Component {
                 <Sidebar />
                 <div className={classes.chatWindow}>
                     <Switch>
-                        <Route path="/account" component={Account} />
-                        <Route path="/" component={MessageForm} />
+                        <Route path='/account' component={Account} />
+                        <Route path='/' component={MessageForm} />
                     </Switch>
                 </div>
             </div>
@@ -31,11 +31,9 @@ class MainPage extends Component {
     }
 }
 
-const mapStateToProps = (store) => {
-    return {
-        activeContact: store.contacts.activeContact,
-        connected: store.ws.connected,
-    }
-}
+const mapStateToProps = store => ({
+    activeContact: store.contacts.activeContact,
+    connected: store.ws.connected,
+});
 
 export default connect(mapStateToProps)(MainPage);

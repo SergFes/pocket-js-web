@@ -1,42 +1,42 @@
 import * as Constants from '../constants';
-//import ContactsAPI from './contactsStub'
+// import ContactsAPI from './contactsStub'
 
-//let contacts = ContactsAPI.all();
+// let contacts = ContactsAPI.all();
 
 const initialState = {
     contacts: [],
     activeContact: null,
-    is_loading_contacts: false
-}
+    is_loading_contacts: false,
+};
 
 export function contactsReducer(state = initialState, action) {
     switch (action.type) {
-        //Получение списка контактов
+    // Получение списка контактов
         case Constants.GET_CONTACTS_PENDING: {
-            state = {...state, is_loading_contacts: true};
-        break;
+            state = { ...state, is_loading_contacts: true };
+            break;
         }
         case Constants.GET_CONTACTS_FULFILLED: {
             state = {
                 ...state,
                 contacts: action.payload.data.data,
-                is_loading_contacts: false
+                is_loading_contacts: false,
             };
-        break;
+            break;
         }
         case Constants.GET_CONTACTS_REJECTED: {
             state = {
                 error_message: action.payload.message,
-                is_loading_contacts: false
+                is_loading_contacts: false,
             };
-        break;
+            break;
         }
 
-        //Добавление контакта
+        // Добавление контакта
         case Constants.ADD_CONTACT_PENDING: {
             state = {
                 ...state,
-                is_loading_contact: true
+                is_loading_contact: true,
             };
             break;
         }
@@ -44,7 +44,7 @@ export function contactsReducer(state = initialState, action) {
             state = {
                 ...state,
                 user: action.payload.data,
-                is_loading_contact: false
+                is_loading_contact: false,
             };
             break;
         }
@@ -52,44 +52,44 @@ export function contactsReducer(state = initialState, action) {
             state = {
                 ...state,
                 is_loading_contact: false,
-                error_message: action.payload.message
+                error_message: action.payload.message,
             };
             break;
         }
 
         case Constants.ADD_TO_BLACKLIST_PENDING: {
             state = {
-                ...state
+                ...state,
             };
             break;
         }
         case Constants.ADD_TO_BLACKLIST_FULFILLED: {
             state = {
                 ...state,
-                blacklist_item: action.payload.data
+                blacklist_item: action.payload.data,
             };
             break;
         }
         case Constants.ADD_TO_BLACKLIST_REJECTED: {
             state = {
                 ...state,
-                error_message: action.payload.message
+                error_message: action.payload.message,
             };
             break;
         }
 
-        //Редактирование контакта
+        // Редактирование контакта
         case Constants.EDIT_CONTACT: {
             state = {
                 ...state,
-                is_loading_contact: true
+                is_loading_contact: true,
             };
             break;
         }
         case Constants.EDIT_CONTACT_FULFILLED: {
             state = {
                 ...state,
-                is_loading: false
+                is_loading: false,
             };
             break;
         }
@@ -97,23 +97,23 @@ export function contactsReducer(state = initialState, action) {
             state = {
                 ...state,
                 is_loading_contacts: false,
-                error_message: action.payload.message
+                error_message: action.payload.message,
             };
             break;
         }
 
-        //Удаление контакта
+        // Удаление контакта
         case Constants.DELETE_CONTACT: {
             state = {
                 ...state,
-                is_loading_contact: true
+                is_loading_contact: true,
             };
             break;
         }
         case Constants.DELETE_CONTACT_FULFILLED: {
             state = {
                 ...state,
-                is_loading: false
+                is_loading: false,
             };
             break;
         }
@@ -121,7 +121,7 @@ export function contactsReducer(state = initialState, action) {
             state = {
                 ...state,
                 is_loading_contacts: false,
-                error_message: action.payload.message
+                error_message: action.payload.message,
             };
             break;
         }
@@ -129,7 +129,7 @@ export function contactsReducer(state = initialState, action) {
         case Constants.GET_BLACKLIST_PENDING: {
             state = {
                 ...state,
-                is_loading_list: true
+                is_loading_list: true,
             };
             break;
         }
@@ -137,7 +137,7 @@ export function contactsReducer(state = initialState, action) {
             state = {
                 ...state,
                 blacklist: action.payload.data.data,
-                is_loading_list: false
+                is_loading_list: false,
             };
             break;
         }
@@ -145,31 +145,31 @@ export function contactsReducer(state = initialState, action) {
             state = {
                 ...state,
                 is_loading_list: false,
-                error_message: action.payload.message
+                error_message: action.payload.message,
             };
             break;
         }
 
         case Constants.DEL_FROM_BLACKLIST_PENDING: {
             state = {
-                ...state
+                ...state,
             };
             break;
         }
         case Constants.DEL_FROM_BLACKLIST_FULFILLED: {
             state = {
-                ...state
+                ...state,
             };
             break;
         }
         case Constants.DEL_FROM_BLACKLIST_REJECTED: {
             state = {
                 ...state,
-                error_message: action.payload.message
+                error_message: action.payload.message,
             };
             break;
         }
-        default: {state = {...state}}
+        default: { state = { ...state }; }
     }
     return state;
 }

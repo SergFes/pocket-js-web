@@ -8,8 +8,8 @@ const ContactsAPI = {
             text: 'Текст последнего сообщения',
             unread: 2,
             time: '10.10.2018',
-            status: true
-        }, 
+            status: true,
+        },
         {
             id: '5c5b1fc7eee22122c4ec78e2',
             img: 'https://mielgroup.org/wp-content/uploads/user-60x60.png',
@@ -17,8 +17,8 @@ const ContactsAPI = {
             text: 'Текст последнего сообщения',
             unread: 5,
             time: '10.10.2018',
-            status: false
-        }
+            status: false,
+        },
     ],
     users: [
         {
@@ -30,9 +30,9 @@ const ContactsAPI = {
             text: 'Текст последнего сообщения',
             unread: 2,
             time: '10.10.2018',
-            status: true
+            status: true,
 
-        }, 
+        },
         {
             id: '5c5b1fc7eee22122c4ec78e2',
             img: 'https://kwork.ru/files/avatar/medium/11/602845-1.jpg',
@@ -42,7 +42,7 @@ const ContactsAPI = {
             text: 'Текст последнего сообщения',
             unread: 5,
             time: '10.10.2018',
-            status: false
+            status: false,
         },
         {
             id: 3,
@@ -53,8 +53,8 @@ const ContactsAPI = {
             text: 'Текст последнего сообщения',
             unread: 5,
             time: '10.10.2018',
-            status: false
-        }, 
+            status: false,
+        },
         {
             id: 4,
             img: 'https://kwork.ru/files/avatar/medium/11/602845-1.jpg',
@@ -64,7 +64,7 @@ const ContactsAPI = {
             text: 'Текст последнего сообщения',
             unread: 5,
             time: '10.10.2018',
-            status: false
+            status: false,
         },
         {
             id: 5,
@@ -75,29 +75,29 @@ const ContactsAPI = {
             text: 'Текст последнего сообщения',
             unread: 5,
             time: '10.10.2018',
-            status: false
-        }
+            status: false,
+        },
     ],
     foundUsers: [],
-    all(){
+    all() {
         return this.contacts;
     },
-    get(id){
+    get(id) {
         const isContact = p => p.id === id;
-        return this.contacts.find(isContact)
+        return this.contacts.find(isContact);
     },
-    addContact(name){
-        let user = this.users.find(x => x.name === name);
+    addContact(name) {
+        const user = this.users.find(x => x.name === name);
         this.contacts.push(user);
     },
-    findUsers(name){
+    findUsers(name) {
         this.foundUsers.length = 0;
-        let user = this.users.find(x => x.name === name);
-        this.foundUsers.push(user);    
+        const user = this.users.find(x => x.name === name);
+        this.foundUsers.push(user);
     },
-    getUsers(){
+    getUsers() {
         return this.foundUsers;
-    }
-}
+    },
+};
 
-export default ContactsAPI
+export default ContactsAPI;

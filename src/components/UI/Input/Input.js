@@ -2,7 +2,7 @@ import React from 'react';
 
 import classes from './Input.module.css';
 
-const Input = ( props ) => {
+const Input = (props) => {
     let inputElement = null;
     let inputClasses = [];
     if (props.inputClass) {
@@ -19,50 +19,60 @@ const Input = ( props ) => {
         labelClasses = props.labelClass.split(' ').map(el => classes[el]);
         labelClasses.push(classes.Label);
     }
-    
-    let elementClasses = []
+
+    let elementClasses = [];
     if (props.elementClass) {
         elementClasses = props.elementClass.split(' ').map(el => classes[el]);
     }
     elementClasses.push(classes.Input);
 
-    switch ( props.elementType ) {
-        // case ( 'inputNumber' ):
-        //     inputElement = <input type='number'
-        //         className={inputClasses.join(' ')}
-        //         {...props.elementConfig}
-        //         value={props.value}
-        //         onKeyDown={(event) => props.changed(event,props.inputId)} />;
-        //     break;
-        case ( 'input' ):
-            inputElement = <input 
-                type={props.inputType}
-                className={inputClasses.join(' ')}
-                {...props.elementConfig}
-                value={props.value}
-                onChange={props.changed} />;
+    switch (props.elementType) {
+    // case ( 'inputNumber' ):
+    //     inputElement = <input type='number'
+    //         className={inputClasses.join(' ')}
+    //         {...props.elementConfig}
+    //         value={props.value}
+    //         onKeyDown={(event) => props.changed(event,props.inputId)} />;
+    //     break;
+        case ('input'):
+            inputElement = (
+                <input
+                    type={props.inputType}
+                    className={inputClasses.join(' ')}
+                    {...props.elementConfig}
+                    value={props.value}
+                    onChange={props.changed}
+                />
+            );
             break;
-        case ( 'search' ):
-            inputElement = <input 
-                type={props.inputType}
-                className={inputClasses.join(' ')}
-                {...props.elementConfig}
-                value={props.value}
-                onChange={props.changed} />;
+        case ('search'):
+            inputElement = (
+                <input
+                    type={props.inputType}
+                    className={inputClasses.join(' ')}
+                    {...props.elementConfig}
+                    value={props.value}
+                    onChange={props.changed}
+                />
+            );
             break;
-        case ( 'textarea' ):
-            inputElement = <textarea
-                className={inputClasses.join(' ')}
-                {...props.elementConfig}
-                value={props.value}
-                onChange={props.changed} />;
+        case ('textarea'):
+            inputElement = (
+                <textarea
+                    className={inputClasses.join(' ')}
+                    {...props.elementConfig}
+                    value={props.value}
+                    onChange={props.changed}
+                />
+            );
             break;
-        case ( 'select' ):
+        case ('select'):
             inputElement = (
                 <select
                     className={inputClasses.join(' ')}
                     value={props.value}
-                    onChange={props.changed}>
+                    onChange={props.changed}
+                >
                     {props.elementConfig.options.map(option => (
                         <option key={option.value} value={option.value}>
                             {option.displayValue}
@@ -72,11 +82,14 @@ const Input = ( props ) => {
             );
             break;
         default:
-            inputElement = <input
-                className={inputClasses.join(' ')}
-                {...props.elementConfig}
-                value={props.value}
-                onKeyUp={props.changed} />;
+            inputElement = (
+                <input
+                    className={inputClasses.join(' ')}
+                    {...props.elementConfig}
+                    value={props.value}
+                    onKeyUp={props.changed}
+                />
+            );
     }
 
     return (
@@ -85,7 +98,6 @@ const Input = ( props ) => {
             {inputElement}
         </div>
     );
-
 };
 
 export default Input;

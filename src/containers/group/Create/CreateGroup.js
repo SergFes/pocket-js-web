@@ -1,25 +1,25 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 
-import {createGroup} from '../../../store/actions/index';
-import {connect} from 'react-redux';
+import { connect } from 'react-redux';
+import { createGroup } from '../../../store/actions/index';
 
 import Input from '../../../components/UI/Input/Input';
 
 import classes from './CreateGroup.module.css';
 
 class CreateGroup extends Component {
-    // = (props) => 
+    // = (props) =>
     state = {
-        name:'',
-        description: ''
+        name: '',
+        description: '',
     }
 
     onChangeNameHandler = (event) => {
-        this.setState({name: event.target.value})
+        this.setState({ name: event.target.value });
     }
 
     onChangeDescriptionHandler = (event) => {
-        this.setState({description: event.target.value})
+        this.setState({ description: event.target.value });
     }
 
     onCLickConfirmHandler = () => {
@@ -30,30 +30,32 @@ class CreateGroup extends Component {
         return (
             <div className={classes.CreateGroup}>
                 <div className={classes.Inputs}>
-                    <Input 
+                    <Input
                         elementType='input'
                         label='Название группы:'
                         labelClass='createGroup'
                         placeholder='Введите название'
-                        changed={this.onChangeNameHandler}/>
-                    <Input 
+                        changed={this.onChangeNameHandler}
+                    />
+                    <Input
                         elementType='input'
                         labelClass='createGroup'
                         label='Описание группы:'
                         placeholder='Введите описание'
-                        changed={this.onChangeDescriptionHandler}/>
+                        changed={this.onChangeDescriptionHandler}
+                    />
                 </div>
                 <div className={classes.Buttons}>
                     {/* <button className={classes.Button} onCLick={() => {props.createGroup({...this.state})}}> */}
                     <button className={classes.Button} onClick={this.onCLickConfirmHandler}>
-                        <i class="fas fa-check"></i>
+                        <i className='fas fa-check' />
                     </button>
                     <button className={classes.Button} onClick={this.props.closeForm}>
-                        <i class="fas fa-times"></i>
+                        <i className='fas fa-times' />
                     </button>
                 </div>
             </div>
-        )
+        );
     }
 }
 
