@@ -18,9 +18,9 @@ branches:
 #  on:
 #    branch: gh-pages
 
-#scripts: true
-#
-#after_success:
-#  - echo '/*  /index.html 200' > build/_redirects
-#  - chmod +x ./deploy.sh
-#  - ./deploy.sh
+scripts: true
+
+after_success:
+  - echo '/*  /index.html 200' > build/_redirects
+  - chmod +x ./deploy.sh
+  - ./deploy.sh
