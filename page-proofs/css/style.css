@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+* {
+    margin: 0 auto;
+    max-width: 1440px;
+    padding: 0;
+}
+.header {
+    height: 31px;
+    background: #256B91;
+    display: flex;
+    /*position: fixed;*/
+    justify-content: space-around;
+}
+.header__text {
+    font-family: Roboto, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+    font-size: 11px;
+    letter-spacing: 0.01em;
+    color: #FFFFFF;
+    opacity: 0.5;
+    flex-grow: 1;
+    align-self: center;
+    margin: 10px;
+}
+.header-btn {
+    height: 12px;
+    width: 12px;
+    background-color: #256B91;
+    border: none;
+    align-self: center;
+    margin: 8px;
+    outline: 0;
+    cursor: pointer;
+}
+.header-btn__logo {
+    width: 13px;
+    cursor: pointer;
+}
+.header-btn_close {
+    margin-right: 23px;
+}
+.header-btn_minimise {
+    border-bottom: 2px solid white;
+}
+/*---content---*/
+.content{
+    display: flex;
+    justify-content: center;
+    align-items: stretch}
+.sidebar{
+    margin: 0;
+    display: flex;
+
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.menu{
+    background-color: #3498DB;
+    margin: 0;
+    justify-content: space-between;
+    align-items: center;
+    flex-basis: 49px;
+}
+.menu-btn{
+    cursor: pointer;
+    border: none;
+    background-color: #3498DB;
+}
+.sidebar_item {
+    display: flex;
+    width: 410px;
+    flex-wrap: wrap;
+}
+.message-screen {
+    background-image: url(../img/fon.svg);
+    width: 760px;
+    height: 989px;
+    margin: 0;
+    display: flex;
+}
+.message-screen__text {
+
+    align-self: center;
+    text-decoration: none;
+
+    font-family: Roboto,sans-serif;
+    line-height: normal;
+    font-size: 36px;
+    text-align: center;
+    color: #7A7876;
+}
+/*---burger-menu-style---*/
+.burger-menu {
+    width: 410px;
+    background-color: #3498DB;
+    position: relative;
+
+    text-align: center;
+    height: 40px;
+}
+.burger-menu__checkbox {
+    display: none;
+}
+.burger-menu__label{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    z-index: 2;
+}
+.burger-menu__search {
+    position: relative;
+    border-radius: 5px;
+    border: none;
+    padding: 5px;
+    width: 80%;
+    top: 7px;
+    left: 30px;
+    font-family: Roboto,sans-serif;
+    font-style: italic;
+    font-weight: 300;
+    line-height: normal;
+    font-size: 14px;
+}
+.burger-line {
+    position: absolute;
+    top: 15px;
+    left: 21px;
+    width: 19px;
+    height: 2px;
+    background-color: white;
+}
+.burger-line_second, .burger-line_third {
+    top: 20px;
+}
+.burger-line_third {
+    top: 25px;
+}
+.main-menu {
+    position: absolute;
+    display: block;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    /*  меню сдвигается вниз на 100% */
+    transform: translateY(100%);
+    max-height: 0;
+    font-size: 0;
+    overflow: hidden; /*чтобы дети не вылезали за блок родителя*/
+    /*для плавного раскрытия меню*/
+    transition: 0.5s all;
+}
+.burger-menu__items {
+    display: block ;
+    width: 100%;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    /*border-top: 0.1px solid whitesmoke;*/
+    background-color: #3498DB;
+
+    font-family: Roboto, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    /*font-size: 14px;*/
+    text-align: center;
+}
+.burger-menu__icon:hover {
+    color: #F8D57D;
+}
+/* анимация */
+/* при переключении чекбокса в положение checked ~ следующий дочерний эл. с классом main-menu - задаем для него свойства*/
+.burger-menu__checkbox:checked ~ .main-menu {
+    max-height: 500px;
+    font-size: 16px;
+}
+/*---add buttons---*/
+.add-components {
+    margin: 1px;
+    display: flex;
+    align-items: stretch;
+    background-color:  #F9F9F9;
+    flex-direction: column;
+    /*box-shadow: 0 1px 1px rgba(0, 0, 0, 0.11);*/
+
+}
+.create,.add-group{
+    margin: 0;
+    border: none;
+    display: flex;
+    background-color:  #F9F9F9;
+    opacity: 50%;
+    cursor: pointer;
+}
+.create__icon,.add-group__icon{
+    margin: 10px;
+}
+.create__text,.add-group__text{
+    margin: 20px;
+    font-family: Roboto,sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 14px;
+}
+/*----------contact----------*/
+.contact-list__item{
+    margin: 0;
+}
+

@@ -1,0 +1,100 @@
+.Profile{
+	align-items: center;
+	color: #34495E;
+	display: flex;
+    flex-direction: column;
+	height: 100%;
+}
+.Header{
+	background-image: url(../../images/user_profile/ellipse.svg);
+    background-repeat: no-repeat;
+    background-position-y: -87px;
+    height: 254px;
+    width: 410px;
+}
+.User{
+	margin: 0 auto;
+	width: 138px;
+}
+.Avatar{
+	border: 4px solid white;
+    border-radius: 50%;
+    display: block;
+    height: 138px;
+    margin-top: 40px;
+}
+.OnLine{
+	color: #0F9D58;
+	font: normal 300 14px/normal Roboto;
+	text-align: center;
+}
+.OffLine{
+	display: none;
+}
+
+.Title{
+	font: normal 500 16px/normal Roboto;
+	margin: 17px;
+	text-align: center;
+}
+.Email{
+	font: normal 300 14px/34px Roboto;
+	text-align: center;
+}
+.Name{
+	font: normal normal 24px/36px Roboto;
+}
+.Info{
+	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+	padding: 25px;
+}
+.InfoTitle{
+	font: normal normal 16px/19px Roboto;
+	margin-bottom: 31px;
+}
+.InfoText{
+	font: normal 300 16px/normal Roboto;
+}
+.Message{
+	align-items: center;
+	align-self: flex-start;
+	color: #3498DB;
+	display: flex;
+	height: 60px;
+}
+.MessageIcon{	
+	font-size: 25px;
+	margin: 25px;
+}
+.MessageText{
+	font: normal bold 16px/19px Roboto;
+}
+
+.ButtonsBlock{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin-top: auto;
+	padding: 20px;
+	width: 100%;
+}
+.Button{
+	align-items: center;
+	background: #bababa;
+	border-radius: 25px;
+	color: #fff;
+	display: flex;
+	flex-direction: row;
+	font: normal normal 14px/0 Roboto;
+	justify-content: center;
+	height: 40px;
+	width: 180px;
+}
+.Button:hover{
+	background: #3498DB;
+	cursor: pointer;
+}
+.ButtonIcon{
+	font-size: 15px;
+	margin-right: 15px;
+}

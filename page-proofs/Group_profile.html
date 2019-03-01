@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/Group_profile.css" type="text/css">
+</head>
+<body>
+<section class="profile">
+
+    <div class="header">
+        <div class="header__pic">
+            <img src="img/Group_profile/team.svg" alt="photo" class="header__avatar">
+        </div>
+        <p class="header__text">Групповой профиль</p>
+        <div class="group-info__name">
+            <h1 class="group-name">Группа стажировки GB</h1>
+            <button class="edit">
+                <img src="img/personal_profile/pencil.svg" alt="#" class="edit__icon">
+            </button>
+        </div>
+    </div>
+
+    <div class="status">
+        <span class="status__info">Данное название будут видеть Ваши контакты в Pocket Messengeer.</span>
+        <div class="status__about">
+            <label for="about" class="status__about-add">Описание: </label>
+            <input type="text" class="status__about-text" id="about">
+            <button class="edit">
+                <img src="img/personal_profile/pencil.svg" alt="#" class="edit__icon">
+            </button>
+        </div>
+        <p class="status__text">Команда разработчиков десктоп - версии мессенджера "Pocket Messenger"</p>
+    </div>
+
+    <ul class="group-menu">
+        <li class="group-menu__items">
+            <button class="item-btn">
+                <img src="img/Group_profile/member.svg" alt="#" class="group-menu__icon">
+                Участники
+            </button>
+
+        </li>
+        <li class="group-menu__items group-menu__items_toggle">
+            <button class="item-btn">
+                <img src="img/personal_profile/bell.svg" alt="#" class="group-menu__icon">
+                Оповещения
+            </button>
+
+            <div class="toggle-switch">
+                <input type="checkbox" class="switch" id="switch">
+                <label for="switch" class="switch__line"></label>
+            </div>
+        </li>
+        <li class="group-menu__items">
+            <button class="item-btn">
+                <img src="img/personal_profile/clear.svg" alt="#" class="group-menu__icon">
+                Очистить переписку
+            </button>
+        </li>
+
+        <li class="group-menu__items">
+            <button class="item-btn">
+                <img src="img/Group_profile/invite.svg" alt="#" class="group-menu__icon">
+                Добавить пользователя
+            </button>
+        </li>
+
+        <li class="group-menu__items">
+            <button class="item-btn item-btn_red">
+                <img src="img/Group_profile/del_icon.svg"  alt="#" class="group-menu__icon group-menu__icon_red">
+                Удалить пользователя
+            </button>
+        </li>
+    </ul>
+    <div class="close-profile">
+        <button class="close-btn">
+            <img src="img/personal_profile/cancel.svg" alt="#" class="close-btn__icon">
+        </button>
+    </div>
+
+</section>
+</body>
+</html>

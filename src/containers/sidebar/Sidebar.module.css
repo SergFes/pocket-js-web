@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+/*sidebar*/
+.Sidebar{
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.Text{
+    font-weight: 500;
+    text-align: center;
+    color: inherit;
+}
+.TextActive{
+    font-weight: 500;
+    text-align: center;
+    color: #F8D57D;
+}
+
+.Icon{
+    padding: 5px;
+    color: inherit;
+}
+
+.IconActive{
+    padding: 5px;
+    color: #F8D57D;
+}
+
+.Tabs{
+    display: flex;
+}
+
+.Tab:hover .Text,
+.Tab:hover .Icon
+{
+    color: #F8D57D;
+}
+

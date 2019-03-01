@@ -1,0 +1,317 @@
+
+.Profile{
+	width: 410px;
+    background-color: #F9F9F9;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    align-content: stretch;
+    justify-content: space-around;
+    margin: 0;
+}
+.Header{
+	background-image: url(../../images/user_profile/ellipse.svg);
+    background-repeat: no-repeat;
+    background-position-y: -60px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+}
+
+.ChatProfile_HeaderAvatar__3NTqC{
+    background: #6866e6;
+}
+.HeaderAvatar{	
+    border: 4px solid white;
+    border-radius: 50%;
+    display: block;
+    margin: 30px auto;
+}
+
+.HeaderText{
+	font-family: Roboto,sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    font-size: 16px;
+    color: #34495E;
+    text-align: center;
+    margin: 12px;
+}
+
+.GroupInfoName{
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 45px;
+    align-items: center;
+}
+
+.GroupName{
+    display: block;
+    flex-grow: 1;
+    align-self: center;
+    text-align: center;
+     font-family: Roboto,sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 24px;
+    color: #34495E;
+}
+
+.Edit{
+    border: none;
+    background-color: #F9F9F9;
+    border-radius: 50%;
+    margin: 5px 15px;
+    cursor: pointer;
+    outline: 0 none;
+}
+
+.EditIcon{
+    background-image: url(../../images/personal_profile/pencil.svg);
+    height: 30px;
+    width: 30px;
+}
+
+.Status{
+    display: flex;
+    flex-direction: column;
+}
+
+.StatusInfo{
+    display: block;
+    margin: 25px 0;
+    font-family: Roboto, sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    font-size: 11px;
+    text-align: center;
+    color: #34495E;
+}
+
+.StatusAbout{
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.StatusAboutAdd{
+    display: block;
+    align-self: center;
+    text-align: left;
+    padding-left: 25px;
+    background: #F9F9F9;
+}
+
+.StatusAboutText{
+    outline: none;
+    border: none;
+    flex-grow: 1;
+    background-color: #F9F9F9;
+}
+
+.StatusText{
+    margin: 10px 25px;
+    font-family: Roboto,sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    font-size: 14px;
+    color: #34495E;
+}
+
+.GroupMenu{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 20px 0;
+    margin: 0;
+}
+
+.GroupMenuItems{
+    margin: 0;
+}
+.GroupMenuItemsNotification {
+    display: flex;
+}
+.GroupMenuIcon{
+	margin: 0 20px;
+}
+.GroupMenuIconMembers{
+    background-image: url(../../images/Group_profile/member.svg);
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 15px;
+}
+.GroupMenuIconBell{
+    background-image: url(../../images/personal_profile/bell.svg);
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 25px;
+}
+.GroupMenuIconClear{
+    background-image: url(../../images/personal_profile/vector.svg);
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 17px;
+}
+.GroupMenuIconAdd {
+    background-image: url(../../images/Group_profile/invite.svg);
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 17px;
+}
+.GroupMenuIconExit{
+     background-image: url(../../images/Group_profile/Vector.svg);
+     background-repeat: no-repeat;
+     width: 20px;
+     height: 17px;
+}
+.GroupMenuIconRed {
+    background-image: url(../../images/Group_profile/del_icon.svg);
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 17px;
+}
+
+.ItemBtn{
+    background-color: #F9F9F9;
+    margin: 0;
+    width: 100%;
+    padding: 15px 20px;
+    display: flex;
+    outline: none;
+    border: none;
+    cursor: pointer;
+     font-family: Roboto, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+}
+.ItemBtn:hover{
+	font-family: Roboto,sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    color: #3498DB;
+}
+.ItemBtnRed{
+	color: #db3434;
+}
+.ItemBtnRed:hover{
+	color: #bd3434;
+    font-weight: bold;
+}
+.CloseBtnIcon {
+
+}
+
+.ToggleSwitch{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 40px;
+    margin: 0 30px;
+    color: #fff;
+    font-size: 24px;
+    text-shadow: 4px 4px 4px rgb(73, 56, 246);
+}
+
+.Switch{
+	display: none;
+}
+
+.SwitchLine{
+    width: 35px;
+    height: 15px;
+    background: rgba(34, 31, 31, 0.26);
+    border-radius: 100px;
+    position: relative;
+    cursor: pointer;
+}
+
+.SwitchLine:before {
+    content: '';
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    border-radius: 50%;
+    background: #3498DB;
+    top: -3px;
+    right: -3px;
+    box-shadow: 0 3px 4px 0 rgba(0,0,0,0.30);
+}
+
+.Switch:checked + .SwitchLine {
+    background: #F9F9F9;
+    border: 1.5px solid rgba(34, 31, 31, 0.26);
+}
+.Switch:checked + .SwitchLine::before {
+    box-shadow: 0 3px 4px 0 rgba(0,0,0,0.30);
+    background: darkgrey;
+}
+.Switch:checked + .SwitchLine::before {
+    right: 20px;
+}
+
+
+.CloseProfile{
+    background-color: #f9f9f9;
+    margin-top: 2px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.CloseBtn{
+	background-color: #bababa;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin: 0 auto;
+    padding: 0 25px;
+    height: 40px;
+    font-family: Roboto,sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 14px;
+    align-items: center;
+    display: flex;
+    color: #fff;
+    border-radius: 30px
+}
+.CloseBtn:hover{
+    background-color: #3498db;
+}
+.CloseBtnIcon{
+	margin: 10px;
+    background-image: url(../../images/Group_profile/close.svg);
+    width: 15px;
+    height: 15px;
+
+}
+
+
+.Invite{
+    background-color: #fff;
+    color: #3498db;
+    cursor: pointer;
+    height: 71px;
+    margin-left: 20px;
+    width: 377px;
+    word-break: break-all;
+}
+
+
+
+
+
+
+

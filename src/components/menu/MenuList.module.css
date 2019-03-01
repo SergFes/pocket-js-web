@@ -1,0 +1,20 @@
+.Header{
+	align-items: center;
+	background-color: #3498db;
+	display: flex;
+	justify-content: flex-end;
+	height: 49px;
+	padding-right: 20px;
+}
+.Button{
+	color: #fff;
+	cursor: pointer;
+	display: block;
+	font-size: 34px;
+}
+.Button:hover{
+	color: #f8d57d;
+}
+.List{
+	padding: 35px 19px;
+}

@@ -1,0 +1,40 @@
+.Item{
+	align-items: center;
+	display: flex;
+	flex-direction: row;
+	list-style: none;
+	margin-bottom: 15px;
+}
+
+.Avatar{
+	margin-right: 15px;
+}
+
+.Name{
+	color: #000;
+	font: bold 14px/14px Roboto, sans-serif;
+}
+
+.AvatarImg{
+	
+}
+
+.OnlineMark{
+	background: #0f9d58;
+	border: 1px solid #fff;
+}
+.Button{
+	border: none;
+	cursor: pointer;
+	margin-left: auto;
+	margin-right: 15px;
+	outline: none;
+}
+.Button:hover .ButtonIcon{
+	color: #f8d57d;
+}
+
+.ButtonIcon{
+	color: #3498db;
+	font-size: 22px;
+}

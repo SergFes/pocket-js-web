@@ -1,0 +1,115 @@
+
+.Menu{
+	background-color: #3498DB;
+    display: flex;   
+    padding: 5px;
+    width: 410px;
+}
+.Search{
+    position: relative;
+}
+.SearchInput{   
+    border-radius: 35px;
+    border: none;
+    font: italic 300 14px/normal Roboto, sans-serif;
+    height: 35px;
+    outline: none;
+    margin: 13px;
+    padding: 17px;
+    width: 326px;
+}
+.SearchIcon{
+    color: #bababa;
+    cursor: pointer;
+    position: absolute;
+    right: 32px;
+    top: 22px;
+}
+
+.Burger {
+    height: 18px;
+    margin: 24px 4px 0 22px;
+    width: 20px;
+}
+
+.BurgerIcon{
+    color: #fff;
+    font-size: 22px;    
+    line-height: 11px;
+}
+.BurgerIcon:hover{
+    color: #f8d57d;
+    cursor: pointer;
+}
+
+/*линии*/
+/*.BurgerLine,
+.Burger:before,
+.Burger:after{
+    background-color: #fff;
+    content: "";
+    display: block;
+    height: 2px;
+    width: 18px;
+   
+}
+.BurgerLine{
+    margin: 4px 0 3px 0;
+}*/
+
+.MainMenu{
+    width: 410px;
+    transform: translateY(100%);
+    transition: 0.5s all;
+    z-index: 2; /*чтобы не пряталось за модальным окном поиска контактов*/
+}
+.MainMenuClosed{
+	display: none;
+}
+
+.BurgerItem{
+	display: block;
+    width: 100%;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    background-color: #3498db;
+    font: normal 500 14px/normal Roboto, sans-serif;
+    text-align: center;
+    cursor: pointer;
+}
+.BurgerItem:hover {
+    color: #f8d57d;
+}
+
+.List{
+    height: 834px;
+}
+.ButtonsBlock{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: auto;
+    padding: 20px;
+    width: 100%;
+}
+.Button{
+    align-items: center;
+    background: #bababa;
+    border-radius: 25px;
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    font: normal normal 16px/0 Roboto;
+    justify-content: center;
+    height: 40px;
+    width: 180px;
+}
+.Button:hover{
+    background: #3498DB;
+    cursor: pointer;
+}
+.ButtonIcon{
+    font-size: 15px;
+    margin-right: 15px;
+}

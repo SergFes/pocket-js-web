@@ -1,0 +1,36 @@
+.Container{
+	background-color: #fff;
+	height: 635px;
+	width: 424px;
+}
+
+.Header{
+	align-items: center;
+	background-color: #3498db;
+	display: flex;
+	flex-direction: row;
+	height: 50px;
+	padding: 20px;
+}
+
+
+.Title{
+	color: #fff;
+	font: bold 16px/16px Roboto, sans-serif; 
+}
+
+.List{
+	padding: 10px;
+}
+
+.CloseBtn{
+	cursor: pointer;
+	margin-left: auto;
+}
+.CloseBtn:hover .Icon{
+	color: #f8d57d;
+}
+.Icon{
+	color: #fff;
+	font-size: 34px;
+}

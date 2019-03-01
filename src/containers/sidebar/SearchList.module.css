@@ -1,0 +1,30 @@
+.Item{
+	clear: both;
+	cursor: pointer;
+	height: 72px;
+	padding: 11px 13px;
+	width: 100%;	
+}
+.ActiveItem{
+	background-color: #e5e5e5;
+}
+.Avatar{
+	border-radius: 50%;
+	float: left;
+	margin-right: 20px;
+	width: 50px;
+}
+.Name{
+	color: #000;
+	font: normal bold 14px/normal Roboto;
+	margin-top: 8px;
+}
+.Name:hover{
+	color: #f8d57d;
+	cursor: pointer;
+}
+
+.Email{
+	color: #34495E;
+	font: normal 300 14px/normal Roboto;
+}

@@ -1,0 +1,45 @@
+.Header{
+	align-items: center;
+	background: #3498DB;
+	display: flex;
+	justify-content: space-between;
+	height: 35px;
+	padding: 0 40px;
+}
+.MenuBtn{
+	color: #fff;
+}
+
+.Title{
+	color: #fff;
+	font-size: 16px;
+}
+
+.Subtitle{
+	display: flex;
+	margin-bottom: 40px;
+}
+
+.Text{
+	color: #000;
+	display: block;
+	font-size: 16px;	
+	margin-right: 20px;
+	width: 120px;
+}
+
+.Main{
+	padding: 70px 40px;
+}
+
+.Btn{
+	font-size: 20px;
+}
+
+.Field{
+	width: 100%;
+    max-width: 760px;
+    height: 100vh;
+    box-sizing: border-box;
+    background-color: #F9F9F9;
+}

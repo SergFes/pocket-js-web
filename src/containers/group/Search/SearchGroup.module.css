@@ -1,0 +1,44 @@
+.SearchPanel {
+    border: 1px solid #3498DB;
+    border-radius: 5px;
+    margin: 25px 10px;
+    display: flex;
+}
+
+.Search {
+    background-color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 24px;
+    padding: 10px;
+    outline: none;
+}
+
+.GroupList {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.Buttons {
+    height: calc(1/3);
+    display: flex;
+    justify-content: space-around;
+}
+
+.Button {
+    outline: none;
+    border: none;
+    cursor: pointer;
+    margin: 10px;
+    font-size: 24px;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #3498DB;
+}
+
+.Button:disabled {
+    background-color: #979797;
+}

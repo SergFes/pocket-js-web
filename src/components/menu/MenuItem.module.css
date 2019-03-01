@@ -1,0 +1,18 @@
+.Item{
+	align-items: center;
+	cursor: pointer;
+	display: flex;	
+	margin-bottom: 29px;
+}
+.Icon{
+	color: #3498db;
+	margin-right: 22px;
+	width: 22px;
+}
+.Text{
+	color: #34495e;
+	font: normal normal 16px/19px Roboto;
+}
+.Text:hover{
+	color: #3498db;
+}

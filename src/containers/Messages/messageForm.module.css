@@ -1,0 +1,79 @@
+
+
+.Header {
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+    background: #3498db;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 0 30px 0 10px;
+}
+
+/*картинка и название группы*/
+.ChatInfo{
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
+}
+.ChatIcon{
+	margin: 5px 16px;
+}
+.ChatImg{
+	height: 33px;
+	width: 33px;
+}
+.ChatImgNone{
+	display: none;
+}
+.ChatTitle{
+	color: #fff;
+	font: normal bold 16px/normal Roboto;
+}
+
+/*меню*/
+.MenuNone{
+	display: none;
+}
+.Menu{
+	display: block;
+}
+.MenuIcon{
+	color: #fff;
+	cursor: pointer;
+}
+.MenuIcon:hover{
+	color: #f8d57d;
+}
+
+/*сообщения*/
+.messageList {
+    overflow-y: scroll;
+}
+.messageList::-webkit-scrollbar {
+	width: 8px;
+}
+.messageList::-webkit-scrollbar-thumb {
+	background-color: #333;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-o-border-radius: 5px;
+}
+.messageForm {
+    height: 100%;
+    display: grid;
+    grid-template-rows: 50px 1fr;
+}
