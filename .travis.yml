@@ -5,7 +5,7 @@ node_js:
 cache: yarn
 script:
   - yarn test
-  - yarn build
+#  - yarn build
 branches:
   only:
   - master
