@@ -1,0 +1,130 @@
+.tab-content {
+    display: none;
+    margin: 0;
+    width: 410px;
+    background: #FFFFFF;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.11);
+}
+
+/* Прячем чекбоксы */
+.tab-chat, .tab-contact {
+    display: none;
+}
+/* Стили переключателей вкладок (табов) */
+.tab-text {
+    padding: 15px 25px;
+    font-weight: 500;
+    text-align: center;
+    color: #fff;
+    background:  #3498DB;
+    margin: 0;
+    flex-grow: 1;
+}
+.tab-text:before {
+    font-family: fontawesome, serif;
+    font-weight: normal;
+    margin-right: 10px;
+}
+.tab-text:hover {
+    color: #F8D57D;
+    cursor: pointer;
+}
+.tab-chat:checked+.tab-text {
+    color: #F8D57D;
+    border: none;
+    border-bottom: 2px solid #F8D57D;
+    background:#3498DB;
+}
+.tab-contact:checked+.tab-text {
+    color: #F8D57D;
+    border: none;
+    border-bottom: 2px solid #F8D57D;
+    background:#3498DB;
+}
+/* Активация секций с помощью псевдокласса :checked */
+.tab-chat:checked~.tab-content_chat,
+.tab-contact:checked~.tab-content_contact {
+    display: block;
+}
+.tab-content_chat,.tab-content_contact{
+    align-items: stretch;
+    flex-direction: column;
+}
+/* ---------chat-----------*/
+.chat-list, .contact-list{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.chat-list__item{
+    align-self: stretch;
+}
+.component {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: space-between;
+    align-items: center;
+    flex-basis:410px;
+}
+.component__avatar{
+    width: 50px;
+    height: 52px;
+    margin: 10px;
+    border-radius: 50%;
+}
+.component__chat{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+.component__chat-name{
+    font-family: Roboto,sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+    font-size: 14px;
+    color: #000;
+    text-align: left;
+    margin: 0;
+}
+.component__chat-message {
+    font-family: Roboto,sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 12px;
+    color: #757575;
+    align-self: flex-start;
+    margin: 0;
+}
+.component__notification{
+    background-color:#F46767;
+    padding: 5px 9px;
+    border-radius: 50% ;
+    margin: 10px;
+
+    font-family: Roboto, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+    font-size: 11px;
+    text-align: center;
+    color: #FFFFFF;
+}
+.component__date{
+    margin: 10px;
+    font-family: Roboto,sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    font-size: 12px;
+    text-align: right;
+    color: #757575;
+}
+.component__shape-first{
+    margin-right: -12px;
+    /*overflow: visible;*/
+}

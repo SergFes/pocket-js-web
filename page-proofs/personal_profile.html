@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>personal_profile</title>
+    <link rel="stylesheet" href="css/personal_profile.css" type="text/css">
+</head>
+<body>
+    <section class="profile">
+        
+        <div class="header">
+            <div class="header__pic">
+                <img src="img/personal_profile/avatar.svg" alt="#" class="header__avatar">
+                <button class="change-btn">
+                    <img src="img/personal_profile/photo-camera.svg" alt="#" class="change-btn__icon">
+                </button>
+            </div>
+            <span class="header__text">Мой Профиль</span>
+        </div>
+
+        <div class="profile-info">
+            <span class="profile-info__mail">simsim28@gmail.com</span>
+            <div class="profile-info__name">
+                <h1 class="profile-name">Вася Васильков</h1>
+                <button class="edit">
+                    <img src="img/personal_profile/pencil.svg" alt="#" class="edit__icon">
+                </button>
+            </div>
+        </div>
+        
+        <div class="status">
+            <span class="status__info">Данная информация будет доступна всем пользователям в Pocket Messengeer.</span>
+           <div class="status__about">
+               <label for="about" class="status__about-add">О себе: </label>
+               <input type="text" class="status__about-text" id="about">
+               <button class="edit">
+                   <img src="img/personal_profile/pencil.svg" alt="#" class="edit__icon">
+               </button>
+           </div>
+            <p class="status__text">Web-дизайнер, разработчик мобильных приложений, студент GB.</p>
+        </div>
+        
+        <ul class="profile-menu">
+            <li class="profile-menu__items">
+                <button class="item-btn">
+                    <img src="img/personal_profile/vector.svg" alt="#" class="profile-menu__icon">
+                    Написать сообщение
+                </button>
+
+            </li>
+            <li class="profile-menu__items">
+                <button class="item-btn">
+                    <img src="img/personal_profile/enter.svg" alt="#" class="profile-menu__icon">
+                    Личный кабинет
+                </button>
+            </li>
+            <li class="profile-menu__items profile-menu__items_toggle">
+                <button class="item-btn">
+                    <img src="img/personal_profile/bell.svg" alt="#" class="profile-menu__icon">
+                    Оповещения
+                </button>
+
+                <div class="toggle-switch">
+                    <input type="checkbox" class="switch" id="switch">
+                    <label for="switch" class="switch__line"></label>
+                </div>
+            </li>
+            <li class="profile-menu__items">
+                <button class="item-btn">
+                    <img src="img/personal_profile/exit.svg" alt="#" class="profile-menu__icon">
+                    Выйти из профиля
+                </button>
+            </li>
+            <li class="profile-menu__items">
+                <button class="item-btn">
+                    <img src="img/personal_profile/clear.svg" alt="#" class="profile-menu__icon">
+                    Очистить переписку
+                </button>
+            </li>
+            <li class="profile-menu__items">
+                <button class="item-btn">
+                    <img src="img/personal_profile/delete.svg" alt="#" class="profile-menu__icon">
+                    Удалить профиль
+                </button>
+            </li>
+        </ul>
+<div class="close-profile">
+    <button class="close-btn">
+        <img src="img/personal_profile/cancel.svg" alt="#" class="close-btn__icon">
+    </button>
+</div>
+
+    </section>
+</body>
+</html>

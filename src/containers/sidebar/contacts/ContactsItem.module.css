@@ -1,0 +1,56 @@
+.Item{
+    background-color: #fff;
+	display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: space-between;
+    align-items: center;
+    width: 410px;
+}
+
+.Img{
+	width: 50px;
+    height: 52px;
+    margin: 10px;
+    border-radius: 50%;
+}
+
+.Contact{
+	flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+.Name{
+	font-family: Roboto,sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+    font-size: 14px;
+    color: #000;
+    text-align: left;
+    margin: 0;
+}
+
+.Text{
+	font-family: Roboto,sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 12px;
+    color: #757575;
+    align-self: flex-start;
+    margin: 0;
+}
+
+.Time{
+	margin: 10px;
+    font-family: Roboto,sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    font-size: 12px;
+    text-align: right;
+    color: #757575;
+}

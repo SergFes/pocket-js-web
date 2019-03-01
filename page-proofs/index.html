@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PocketMessenger</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="css/tabs-style.css" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+</head>
+<body>
+
+<header class="header">
+    <p class="header__text">PocketMessenger</p>
+    <button class="header-btn  header-btn_minimise" onclick="minimize()"></button>
+    <button class="header-btn">
+        <img src="img/maximise.svg" alt="-" class="header-btn__logo">
+    </button>
+    <button class="header-btn header-btn_close" onclick="self.close()">
+        <img src="img/close.svg" class="header-btn__logo" alt="-" >
+    </button>
+</header>
+
+<section class="content">
+    <section class="sidebar">
+        <div class="menu sidebar_item">
+            <div class="burger-menu">
+                <button class="burger-menu__icon">
+                    <div class="burger-line burger-line_first"></div>
+                    <div class="burger-line burger-line_second" ></div>
+                    <div class="burger-line burger-line_third"></div>
+                </button>
+
+
+                <input type="checkbox" id="check-menu" class="burger-menu__checkbox">
+                <label for="check-menu" class="burger-menu__label">
+                    <input type="search" class="burger-menu__search" placeholder="Найти...">
+                </label>
+
+                <nav class="main-menu">
+                    <a class="burger-menu__items" href="#">Профиль</a>
+                    <a class="burger-menu__items" href="#">Личный кабинет</a>
+                    <a class="burger-menu__items" href="#">Выйти</a>
+                </nav>
+            </div>
+        </div>
+
+        <div class="sidebar_item">
+            <input class="tab-chat" type="radio" id="tab1" name="tabs" checked>
+            <label for="tab1" class="tab-text" title="Вкладка 1">
+                <i class="fas fa-envelope"></i>  Чаты
+            </label>
+            <input class="tab-contact" type="radio"  id="tab2" name="tabs" >
+            <label for="tab2" class="tab-text" title="Вкладка 2">
+                <i class="fas fa-user-friends"></i>  Контакты
+            </label>
+            <section  class="tab-content tab-content_chat">
+                    <ul class="chat-list">
+                        <li class="chat-list__item">
+                            <div class="component">
+                                <img class="component__avatar"  src="img/woman.svg" alt="avatar">
+                                <div class="component__chat">
+                                    <h1 class="component__chat-name">Группа 2</h1>
+                                    <span class="component__chat-message">Петя: Написал какое-то сообщение</span>
+                                </div>
+                                <div class="component__notification"> 3 </div>
+                                <div class="component__date">
+                                    <span class="component__date-time"> 10.10.18 </span>
+                                    <div class="component__shape">
+                                        <img src="img/checked.svg" alt="f00c" class="component__shape-first">
+                                        <img src="img/checked.svg" alt="f00c" class="component__shape-second">
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                <div class="add-components">
+                    <button class="create">
+                        <img src="img/create.svg" alt="add" class="create__icon">
+                        <span class="create__text">Создать свою группу</span>
+                    </button>
+                    <button class="add-group">
+                        <img src="img/create.svg" alt="add" class="add-group__icon">
+                        <span class="add-group__text">Добавить группу</span>
+                    </button>
+                </div>
+            </section>
+            <section  class="tab-content tab-content_contact">
+                <div class="contact">
+                    <ul class="contact-list">
+                        <li class="contact-list__item">
+                            <div class="component">
+                                <img class="component__avatar"  src="img/man2.svg" alt="avatar">
+                                <div class="component__chat">
+                                    <h1 class="component__chat-name">Петя Петров</h1>
+                                    <span class="component__chat-message">Текст крайнего сообщения</span>
+                                </div>
+                                <div class="component__date">
+                                    <span class="component__date-time"> 10.10.18 </span>
+                                    <div class="component__shape">
+                                        <img src="img/checked.svg" alt="f00c" class="component__shape-first">
+                                        <img src="img/checked.svg" alt="f00c" class="component__shape-second">
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="add-components">
+                        <button class="create">
+                            <img src="img/create.svg" alt="add" class="create__icon">
+                            <span class="create__text">Добавить контакт</span>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+
+        </div>
+        
+
+    </section>
+    <div class="message-screen">
+        <a href="#" class="message-screen__text">Выберите,<br>кому вы хотите<br>написать</a>
+    </div>
+
+</section>
+
+</body>
+</html>

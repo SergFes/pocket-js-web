@@ -1,0 +1,98 @@
+/* .test { */
+  /* background: url('./img/Fon.png'); */
+/* } */
+.date {
+  text-align: center;
+  padding: 20px 0 10px;
+}
+.date span {
+  background: rgba(15, 157, 88, 0.25);
+  border-radius: 8px;
+  padding: 3px 10px;
+}
+.item {
+  padding-left: 30px;
+  padding-bottom: 30px;
+  list-style: none;
+  font-family: "Roboto";
+  font-size: 14px;
+}
+.superBlock {
+  margin: 20px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: 40px 1fr;
+  padding-right: 10px;
+}
+.superBlockMy {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-right: 10px;
+  margin: 20px 0;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+.miniFoto {
+  /* width: 10%; */
+  margin: 0;
+  margin-right: 20px;
+}
+.name {
+  color: #0F9D58;
+}
+.block {
+margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.blockSms {
+  margin: 0;
+  padding: 10px 16px;
+  background: #FFFFFF;
+  -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
+  border-radius: 20px;
+}
+.text {
+  word-wrap: break-word;
+  max-width: 500px;
+  white-space: pre-line;
+}
+.time {
+  padding-left: 11px;
+}
+.timeMy {
+  padding-left: 11px;
+  color: #4285F4;
+}
+.blockMy {
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  /* justify-content: flex-end; */
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.blockSmsMy {
+  margin: 0 15px;
+  padding: 10px 16px;
+  -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
+  border-radius: 20px;
+  background-color: #C6FCFF;
+}

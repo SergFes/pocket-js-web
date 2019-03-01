@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.search-user {
+    background-color: #F9F9F9;
+    width: 410px;
+    height: 885px;
+    display: flex;
+    flex-direction: column;
+}
+.email {
+    padding: 15px;
+    background: #3498DB;
+    display: flex;
+    margin: 15px 0;
+}
+.email__search {
+    flex-grow: 1;
+    padding: 7px;
+    border-radius: 5px;
+    border: none;
+}
+.Find {
+    width: 130px;
+    margin: 0 auto;
+    height: 40px;
+    background: #FFE684;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}

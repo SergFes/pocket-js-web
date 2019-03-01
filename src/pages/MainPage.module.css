@@ -1,0 +1,16 @@
+.mainPage {
+    display: grid;
+    max-width: 1170px;
+    grid-template-columns: 410px 1fr;
+    margin: 0 auto;
+    height: 100vh;
+}
+.chatWindow {
+    width: 100%;
+    max-width: 760px;
+    height: 100vh;
+    /*border: 1px solid #000;*/
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    background: url('../images/Fon.png');
+}

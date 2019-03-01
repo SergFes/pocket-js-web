@@ -1,0 +1,44 @@
+.SearchPanel {
+    background-color: #3498DB;
+}
+
+.Search {
+    background-color: #FFE684;
+    border: none;
+    border-radius: 5px;
+    font-size: 24px;
+    padding: 10px 40px;
+    outline: none;
+    cursor: pointer;
+}
+
+.ContactList {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.Buttons {
+    margin: 15px;
+    height: calc(1/3);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.Button {
+    outline: none;
+    border: none;
+    cursor: pointer;
+    margin: 10px;
+    font-size: 24px;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #3498DB;
+}
+
+.Button:disabled {
+    background-color: #979797;
+}

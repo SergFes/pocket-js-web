@@ -1,0 +1,104 @@
+.Modal {
+    position: fixed;
+/*    z-index: 500;*/
+    /* background-color: white; */
+  /* width: 80%;
+    height: 80%; */
+    /*border: 1px solid #ccc;*/
+    /*box-shadow: 1px 1px 1px black;*/
+    /* padding: 16px; */
+    /* left: 10%; */
+/*    top: 10%;*/
+    top: 0;
+    box-sizing: border-box;
+    transition: all 0.3s ease-out;
+
+    /* width: 1170px; */
+    /* background-image: url(../../../images/background.jpg); */
+    /* background-repeat: no-repeat; */
+    /* min-height: 780px; */
+/*    position: absolute;*/
+    z-index: 200;
+}
+
+.Center {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 8px;
+}
+
+.Opacity {
+    opacity: .95;
+}
+
+.ModalLayer2 {
+    z-index: 1000;
+}
+
+.ModalLayer3 {
+    z-index: 1500;
+}
+
+.SearchContacts{
+    background-color: #f9f9f9;
+    border: none;
+    box-shadow: none;
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+    margin-left: -5px;
+    margin-top: 124px;
+    width: 406px;
+}
+
+.Profile{
+    background-color: #f9f9f9;
+    border: none;
+    box-shadow: none;
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+    margin-left: -5px;
+    margin-top: 124px;
+    width: 406px;
+    height: 100%;
+}
+.ProfileFromMenu{
+    margin-left: -419px;
+}
+
+   
+    
+.MainMenu{
+    background-color: #fff;
+    height: 269px;
+    margin-left: -5px;
+    width: 410px;
+    z-index: 500;
+}
+
+.ChatMenu{
+    background-color: #fff;
+    height: 320px;
+    width: 410px;
+    margin-left: -380px;
+}
+
+.UsersList{
+    left: 45%;
+    top: 10%;
+}
+/* @media (max-width: 600px) {
+    .Modal {
+        width: 500px;
+        left: calc(50% - 250px);
+    }
+} */
+
+@media (min-width: 1025px) {
+    .authModal {
+        width: 40%;
+        left: 30%;
+    }
+}

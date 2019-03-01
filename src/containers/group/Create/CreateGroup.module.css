@@ -1,0 +1,32 @@
+.CreateGroup {
+    width: 410px;
+    height: 210px;
+}
+
+.Inputs {
+    background-color: #3498DB;
+    height: calc(2/3);
+}
+
+.Buttons {
+    height: calc(1/3);
+    display: flex;
+    justify-content: space-around;
+}
+
+.Button {
+    outline: none;
+    border: none;
+    cursor: pointer;
+    margin: 10px;
+    font-size: 24px;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #3498DB;
+}
+
+.Button:disabled {
+    background-color: #979797;
+}
