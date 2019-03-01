@@ -1,0 +1,26 @@
+sudo: false
+language: node_js
+node_js:
+  - "11"
+cache: yarn
+script:
+  - yarn test
+  - yarn build
+branches:
+  only:
+  - master
+#deploy:
+#  provider: pages
+#  skip-cleanup: true
+#  github-token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
+#  keep-history: true
+#  local_dir: build
+#  on:
+#    branch: gh-pages
+
+scripts: true
+
+after_success:
+  - echo '/*  /index.html 200' > build/_redirects
+  - chmod +x ./deploy.sh
+  - ./deploy.sh
