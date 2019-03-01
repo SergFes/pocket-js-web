@@ -6,9 +6,9 @@ cache: yarn
 script:
   - yarn test
 #  - yarn build
-branches:
-  only:
-  - master
+#branches:
+#  only:
+#  - master
 #deploy:
 #  provider: pages
 #  skip-cleanup: true
