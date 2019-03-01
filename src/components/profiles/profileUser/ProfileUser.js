@@ -8,7 +8,6 @@ import styles from "./ProfileUser.module.css";
 
 class ProfileUser extends Component {
     render() {
-        console.log(this.props);
         return(
             <section className={styles.profile} id={this.props.id}>
             <div className={styles.header}>
@@ -19,7 +18,9 @@ class ProfileUser extends Component {
                     </div>
                 </div>
                 <p className={styles.header__text}>Профиль</p>
-                <p className={styles.header__mail}>{this.props.profile.email}</p>
+                <p className={styles.header__mail}>
+                //{this.props.profile.email}
+                </p>
             </div>
                 <h1 className={styles.name}>{this.props.profile.name}</h1>
                 <div className={styles.status}>
@@ -35,7 +36,7 @@ class ProfileUser extends Component {
                                 Написать сообщение
                         </button>
                     </li>
-                    {/* 
+                    {/*
                     <li className={styles["profile-menu__items profile-menu__items_toggle"]}>
                         <button className={styles["item-btn"]}>
                             <img src={require("../../../images/personal_profile/bell.svg")} alt="#" className={styles["profile-menu__icon"]}/>
@@ -46,7 +47,7 @@ class ProfileUser extends Component {
                                 <label for="switch" className={styles.switch__line}>
 
                                 </label>
-                            </input>                      
+                            </input>
                         </div>
                     </li>
                     */}

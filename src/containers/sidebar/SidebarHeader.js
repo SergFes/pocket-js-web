@@ -19,6 +19,7 @@ class SidebarHeader extends Component {
 		blackList: false,
 		blacklistItems: [],
 		active: 0,
+		userName: '',
 		userslist: false, //для обнуления списка при закрытии окна поиска
 		user: null
 	}
@@ -78,20 +79,23 @@ class SidebarHeader extends Component {
 		});
 	}
 
-	updateData = (id) => {
+	updateData = (id, name) => {
 		// //добавляем имя для последующего добавления в общий список;
 		// this.setState({ addItem: name });//для заглушки
 
 		//id для последующего добавления
-		this.setState({ active: id });
+		this.setState({
+			active: id,
+		 	userName: name
+		});
 	}
 
 	//добавление контакта в общий список
 	addContact = () => {
-		this.props.dispatch(addContact(this.state.active));
+		this.props.dispatch(addContact(this.state.active, this.state.userName));
 	}
 
-	//черный список 
+	//черный список
 	usersListToggle = () => {
 		if (this.state.blackList === false) {
 			this.props.dispatch(getBlackList());
@@ -177,6 +181,7 @@ class SidebarHeader extends Component {
 	}
 
 	render() {
+		console.log(this.state.userName);
 		// компоненты главного меню
 		let menuItems = [
 			{

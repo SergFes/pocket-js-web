@@ -6,6 +6,7 @@ export let websocket;
  * An example middleware to handle WebSocket connections.
  * NB: There is no exception handling!
  */
+let oddId = 1;
 const middleware = store => next => action => {
     const dispatch = store.dispatch;
     switch (action.type) {
@@ -23,7 +24,8 @@ const middleware = store => next => action => {
 
         // User request to send a message
         case WEBSOCKET_SEND:
-            websocket.send(action.payload);
+            websocket.send(`${oddId}${action.payload}`);
+            oddId += 2;
             break;
 
         // User request to disconnect

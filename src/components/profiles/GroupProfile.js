@@ -42,7 +42,7 @@ const GroupProfile = (props)  => {
 		        </div>
 
 		        <p className = {styles.StatusText}>
-		        	{props.profile.description}
+		        	//{props.profile.description}
 		        </p>
 		    </div>
 
@@ -122,5 +122,3 @@ const GroupProfile = (props)  => {
 
 
 export default GroupProfile;
-
-

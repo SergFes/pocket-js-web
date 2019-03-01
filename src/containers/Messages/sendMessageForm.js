@@ -3,6 +3,7 @@ import classes from './sendMessage.module.css';
 
 import 'emoji-mart/css/emoji-mart.css';
 import { Picker } from 'emoji-mart';
+import TextareaAutosize from 'react-autosize-textarea';
 
 export default class SendMessage extends React.Component {
   state = {
@@ -14,8 +15,17 @@ export default class SendMessage extends React.Component {
       message: e.target.value
     })
   }
-  handleSubmit = (e) => {
+  handleSubmitForm = (e) => {
     e.preventDefault();
+    if (this.state.message) {
+      this.props.sendMessage(this.state.message);  //метод отправки сообщения (в messageForm)
+      this.setState({
+        message: ''
+      });
+    }
+  }
+  handleSubmit = (e) => {
+    //e.preventDefault();
     if (this.state.message) {
       this.props.sendMessage(this.state.message);  //метод отправки сообщения (в messageForm)
       this.setState({
@@ -53,13 +63,23 @@ export default class SendMessage extends React.Component {
       });
     }
   }
+  keydown = (event) => {
+    if(event.key === 'Enter' && event.shiftKey){
+      event.stopPropagation();
+      
+    }else if(event.keyCode === 13){
+      this.handleSubmit();
+      event.preventDefault();
+    }
+  }
 
   render() {
     return (
       <div className={classes.Main}>
         <button type='submit' className={classes.clip}><i className="fa fa-paperclip fa-2x"></i></button>
+        
         <form
-          onSubmit={this.handleSubmit}
+          onSubmit={this.handleSubmitForm}
           className={classes.Form}>
 {/*          <input
           className={classes.input}
@@ -67,12 +87,15 @@ export default class SendMessage extends React.Component {
             value={this.state.message}
             placeholder="Введите сообщение"
             type="text" />*/}
-          <textarea 
+          <TextareaAutosize
+            onKeyDown={this.keydown}
+            id = "textarea"  
             className={classes.input}
             onChange={this.handleChange}  //отслеживание ввода сообщения
             placeholder="Введите сообщение"
-            value={this.state.message}>
-          </textarea>
+            value={this.state.message}
+            rows={1} />
+          
           <button type='submit' className={classes.btn}><i className="fas fa-paper-plane"></i></button>
           <div>
             <button type='button' className={classes.smile} onClick={this.showEmojis}><i className="far fa-smile fa-2x"></i></button>

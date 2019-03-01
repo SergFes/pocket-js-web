@@ -28,7 +28,7 @@ class ChatsList extends React.Component {
     // }
 
 
-    componentDidUpdate(prevProps, prevState) {  
+    componentDidUpdate(prevProps, prevState) {
         if (this.state.id !== prevState.id) {
             this.props.dispatch(getGroupProfile(this.state.id));
         }
@@ -44,22 +44,22 @@ class ChatsList extends React.Component {
     }
 
     handleClicks = (id) => {
-        if (this.clickTimeout !== null) { 
+        if (this.clickTimeout !== null) {
             this.click_count++;
         } else {
             this.clickTimeout = setTimeout(() => {
                 //один клик
                 if(this.click_count === 1){
-                    this.props.dispatch(setActiveChat(id, 1));  
-                //два клика                
+                    this.props.dispatch(setActiveChat(id, 1));
+                //два клика
                 } else if (id === this.state.id){
-                    this.setState({modal: true});                   
+                    this.setState({modal: true});
                 }
                 this.click_count = 1;
                 clearTimeout(this.clickTimeout);
                 this.clickTimeout = null
             }, 300)
-                       
+
         }
     }
 
@@ -70,7 +70,7 @@ class ChatsList extends React.Component {
     }
 
     getInviteCode = () => {
-        this.props.dispatch(getInviteCode(this.state.id));  
+        this.props.dispatch(getInviteCode(this.state.id));
     }
 
     render(){
@@ -81,9 +81,9 @@ class ChatsList extends React.Component {
 
         let profile = this.state.modal ? (
             <>
-                <Modal classesNames = 'Profile'>   
-                    <GroupProfile id = 'Profile' 
-                                profile = {this.props.group} 
+                <Modal classesNames = 'Profile'>
+                    <GroupProfile id = 'Profile'
+                                profile = {this.props.group}
                                 invitation_link = {this.props.invitation_link}
                                 profileToggle = {this.profileToggle}
                                 getInviteCode = {this.getInviteCode}
@@ -93,8 +93,8 @@ class ChatsList extends React.Component {
         ) : null;
 
         let chats = this.props.chats.map((chat, index) => {
-            return <ChatsItem key = {index} 
-                            handleClicks = {this.handleClicks} 
+            return <ChatsItem key = {index}
+                            handleClicks = {this.handleClicks}
                             {...chat}/>
         });
 
@@ -118,7 +118,7 @@ class ChatsList extends React.Component {
 
                     <button className = {styles.Button} onClick = {this.props.searchGroup} >
                         <div className = {styles.ButtonIcon}>+</div>
-                        <span className = {styles.Text}> Добавить группу</span>                   
+                        <span className = {styles.Text}> Добавить группу</span>
                     </button>
                 </div>
             </>
