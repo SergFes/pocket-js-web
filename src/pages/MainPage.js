@@ -8,6 +8,7 @@ import Account from '../components/account/Account';
 import { connectWS } from '../store/actions';
 
 import classes from './MainPage.module.css';
+import SwitchBlackList from '../containers/UsersBlackList/SwitchBlackList';
 
 class MainPage extends Component {
     componentDidMount() {
@@ -26,6 +27,7 @@ class MainPage extends Component {
                         <Route path="/" component={MessageForm} />
                     </Switch>
                 </div>
+                <SwitchBlackList/>
             </div>
         );
     }

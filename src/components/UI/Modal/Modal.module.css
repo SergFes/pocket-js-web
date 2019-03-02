@@ -68,11 +68,11 @@
     margin-left: -419px;
 }
 
-   
-    
+
+
 .MainMenu{
     background-color: #fff;
-    height: 269px;
+    /*height: 269px;*/
     margin-left: -5px;
     width: 410px;
     z-index: 500;
@@ -86,7 +86,7 @@
 }
 
 .UsersList{
-    left: 45%;
+    left: 49%;
     top: 10%;
 }
 /* @media (max-width: 600px) {

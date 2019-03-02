@@ -1,13 +1,21 @@
 .Item{
 	align-items: center;
 	cursor: pointer;
-	display: flex;	
+	display: flex;
 	margin-bottom: 29px;
+}
+.Item:last-child{
+	margin-bottom: 0px;
 }
 .Icon{
 	color: #3498db;
 	margin-right: 22px;
 	width: 22px;
+}
+.Icon_BlackList{
+	color: #ffffff;
+	width: 22px;
+	cursor: pointer;
 }
 .Text{
 	color: #34495e;

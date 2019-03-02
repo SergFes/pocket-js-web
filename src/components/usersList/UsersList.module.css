@@ -1,6 +1,6 @@
 .Container{
 	background-color: #fff;
-	height: 635px;
+	min-height: 400px;
 	width: 424px;
 }
 
@@ -16,11 +16,13 @@
 
 .Title{
 	color: #fff;
-	font: bold 16px/16px Roboto, sans-serif; 
+	font: bold 16px/16px Roboto, sans-serif;
 }
 
 .List{
 	padding: 10px;
+	max-height: 550px;
+	overflow: auto;
 }
 
 .CloseBtn{
